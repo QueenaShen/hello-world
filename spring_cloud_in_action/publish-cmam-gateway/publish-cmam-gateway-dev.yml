@@ -4,3 +4,22 @@ eureka:
     client:
         service-url:
             defaultZone: http://localhost:1111/eureka
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  context-path: /management
+  security:
+    enabled: false
+
+
+# ENDPOINTS (AbstractEndpoint subclasses)
+endpoints:
+  health:
+    sensitive: false
+  refresh:
+    enabled: true
+  web:
+    exposure:
+      include: refresh
+  env:
+    post:
+      enabled: false
