@@ -1,6 +1,12 @@
 server:
-    port: 7007
+    port: 7005
 eureka:
+  instance:
+    hostname: ${spring.application.name}
+    appname: ${spring.application.name}
+    instanceId: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+    health-check-url-path: /health
+    status-page-url-path: /info
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka
