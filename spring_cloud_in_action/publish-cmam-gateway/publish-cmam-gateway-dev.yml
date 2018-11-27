@@ -7,9 +7,9 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance-id:${random.value}}
     health-check-url-path: /health
     status-page-url-path: /info
-    client:
-        service-url:
-            defaultZone: http://localhost:1111/eureka
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
 # MANAGEMENT HTTP SERVER (ManagementServerProperties)
 management:
   context-path: /management
